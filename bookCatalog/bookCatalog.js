@@ -1,6 +1,4 @@
 var mysql = require('mysql');
-var inspect = require('util').inspect;
-
 var operations = require('./bookCatalogLib.js').operations;
 
 var connection = mysql.createConnection({
