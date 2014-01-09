@@ -1,16 +1,13 @@
-
 html
   head
-    title  displayList	
+    title  displayList  
   body
-    select
-      option(value='volvo') Volvo
-      option(value='saab') Saab
-      option(value='mercedes') Mercedes
-      option(value='audi') Audi
-    input(type='submit', value='submit', name='submit')
-    | Quantity:
-    input(type='text', name='qty')
-    | Total Price:
-    input(type='text', name='price')
-
+    form(method='post', action='/customer')
+      select(#pid, name= 'item')
+        -each product in products
+          option(value=product.p_name ) #{product.p_name}         :  Rs\- #{product.unit_price} 
+      | Quantity:
+      input(type='text', name='qty')
+      | Total Price:
+      input(type='text', name='price')
+      input(type='submit', value='submit', name='submit')

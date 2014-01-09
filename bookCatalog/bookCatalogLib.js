@@ -1,4 +1,3 @@
-
 var operations = {};
 var bookInfo={};
  
