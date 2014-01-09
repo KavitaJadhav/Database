@@ -4,8 +4,7 @@ exports.displayList = function(req, res){
  ordermgmt.list(req , res);
 };
 exports.getCustInfo = function(req, res){
-	console.log(req.body);
-  res.render('customer');
+ ordermgmt.create_order(req , res);
 };
 exports.displaySuccessMsg = function(req, res){
 	ordermgmt.insertToCustInfo(req , res);
